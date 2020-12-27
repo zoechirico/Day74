@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: day74-pod
+  labels:
+    app: day74
+spec:
+  containers:
+    - name: day74-container
+      image: "gcr.io/intrepid-app-299501/day74:dev"
+      ports:
+        - containerPort: 3000
+          name: "day74-server"
+
+
