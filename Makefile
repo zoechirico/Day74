@@ -10,6 +10,10 @@ docker-build:
 push:
 	docker push gcr.io/$(PROJECT)/$(NAME):$(TAG)
 
+load:
+	kind load docker-imag gcr.io/$(PROJECT)/$(NAME):$(TAG)
+
+
 build:
 	go build -v .
 
