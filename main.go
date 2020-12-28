@@ -10,12 +10,8 @@ func root(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "<a href=headers>headers</a><br>")
 }
 
-func hello(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello\n")
-}
-
-func zoe(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "Zoe page\n")
+func mouse(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintf(w, "Mouse page\n")
 }
 
 func headers(w http.ResponseWriter, req *http.Request) {
@@ -29,8 +25,7 @@ func headers(w http.ResponseWriter, req *http.Request) {
 func main() {
 
 	http.HandleFunc("/", root)
-	http.HandleFunc("/zoe", zoe)
-	http.HandleFunc("/hello", hello)
+	http.HandleFunc("/mouse", mouse)
 	http.HandleFunc("/headers", headers)
 
 	http.ListenAndServe(":3000", nil)
